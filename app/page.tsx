@@ -56,7 +56,7 @@ export default function Home() {
             <div className="absolute w-96 h-96 bg-purple-600/20 blur-3xl rounded-full"></div>
 
             <Image
-                src="/Prabhu.png"
+                src="/avatar.png"
                 alt="Prabhu Kumar"
                 width={500}
                 height={600}
