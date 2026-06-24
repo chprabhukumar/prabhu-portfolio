@@ -5,6 +5,9 @@ import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
+import Stars from "@/components/Stars";
+import FadeIn from "@/components/FadeIn";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -57,16 +60,35 @@ export default function Home() {
                 alt="Prabhu Kumar"
                 width={500}
                 height={600}
-                className="rounded-3xl shadow-2xl relative"
+                className="rounded-full"
             />
           </div>
 
         </section>
-        <About/>
-        <Skills/>
+
+          <FadeIn>
+              <About />
+          </FadeIn>
+
+          <FadeIn>
+              <Skills/>
+          </FadeIn>
+
+          <FadeIn>
         <Experience/>
-        <Projects/>
-        <Contact/>
+          </FadeIn>
+
+          <FadeIn>
+            <Projects/>
+          </FadeIn>
+
+          <FadeIn>
+              <Contact/>
+          </FadeIn>
+          <FadeIn>
+              <Footer/>
+          </FadeIn>
+         <Stars/>
       </main>
   );
 }

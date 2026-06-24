@@ -20,7 +20,13 @@ export default function Skills() {
                 {skills.map((skill) => (
                     <div
                         key={skill}
-                        className="bg-zinc-900 rounded-xl p-6 text-center hover:bg-purple-900 transition"
+                        className="bg-white/5
+backdrop-blur-md
+border
+border-purple-500/20 rounded-xl p-6 text-center hover:scale-105
+hover:border-purple-500
+transition-all
+duration-300"
                     >
                         {skill}
                     </div>
