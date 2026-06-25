@@ -36,7 +36,7 @@ export default function Home() {
 
             <div className="mt-10 flex gap-5">
               <a
-                  href="/resume.pdf"
+                  href="/Prabhu _Cv.pdf"
                   download
                   className="bg-purple-600 px-6 py-3 rounded-xl hover:bg-purple-700"
               >
@@ -53,7 +53,7 @@ export default function Home() {
           </div>
 
           <div className="flex-1 flex justify-center relative">
-            <div className="absolute w-96 h-96 bg-purple-600/20 blur-3xl rounded-full"></div>
+            <div className="absolute w-96 h-96 bg-purple-600/20 blur-3xl rounded-full animate-pulse"></div>
 
             <Image
                 src="/avatar.png"
