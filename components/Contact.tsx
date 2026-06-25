@@ -1,6 +1,23 @@
+"use client";
+
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { useState } from "react";
 
 export default function Contact() {
+    const [copied, setCopied] = useState(false);
+
+    const copyEmail = async () => {
+        await navigator.clipboard.writeText(
+            "challaprabhu107@gmail.com"
+        );
+
+        setCopied(true);
+
+        setTimeout(() => {
+            setCopied(false);
+        }, 2000);
+    };
+
     return (
         <section
             id="contact"
@@ -17,18 +34,21 @@ export default function Contact() {
             <div className="bg-zinc-900 p-10 rounded-3xl">
                 <div className="space-y-6">
 
-                    <a
-                        href="mailto:challaprabhu107@gmail.com"
-                        className="flex items-center gap-4"
+                    <button
+                        onClick={copyEmail}
+                        className="flex items-center gap-4 hover:text-purple-400 transition"
                     >
                         <FaEnvelope size={24} />
-                        challaprabhu107@gmail.com
-                    </a>
+                        {copied
+                            ? "Email Copied ✓"
+                            : "challaprabhu107@gmail.com"}
+                    </button>
 
                     <a
                         href="https://github.com/chprabhukumar"
                         target="_blank"
-                        className="flex items-center gap-4"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-4 hover:text-purple-400 transition"
                     >
                         <FaGithub size={24} />
                         github.com/chprabhukumar
@@ -37,7 +57,8 @@ export default function Contact() {
                     <a
                         href="https://www.linkedin.com/in/prabhu-kumar-challa-b385a31ab/"
                         target="_blank"
-                        className="flex items-center gap-4"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-4 hover:text-purple-400 transition"
                     >
                         <FaLinkedin size={24} />
                         LinkedIn Profile
